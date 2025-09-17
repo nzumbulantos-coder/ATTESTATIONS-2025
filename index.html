@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vérification Attestation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔍 Vérification d'attestation</h2>
+    <p>Entrez le code de l'élève :</p>
+    <input type="text" id="codeInput" placeholder="Ex: 61043201020086">
+    <button onclick="verifier()">Vérifier</button>
+    <p class="note">Le code doit être exact pour accéder à l'attestation.</p>
+  </div>
+
+  <script>
+    function verifier() {
+      const code = document.getElementById("codeInput").value.trim();
+      const mapping = {
+        "61043201020086": "bamwenzele_milemba_berma.html",
+        "61003102010492": "salama_nzabonimpa_salome.html",
+        "61043201020046": "azina_bagalwa_aurore.html"
+        // Tu peux ajouter d'autres codes ici
+      };
+      if (mapping[code]) {
+        window.location.href = mapping[code];
+      } else {
+        alert("Code introuvable. Vérifie bien le numéro.");
+      }
+    }
+  </script>
+</body>
+</html>
