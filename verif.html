@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vérification d'attestation - QUICK SOFT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .header {
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .logo {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+    .container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 40px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 80%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .btn-red {
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn-blue {
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn-red:hover {
+      background-color: #d62828;
+    }
+    .btn-blue:hover {
+      background-color: #005bb5;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
+    .note {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #777;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="logo.jpg" alt="Logo QUICK SOFT INFORMATIQUE" class="logo">
+    <h2>🔍 Vérification d'attestation</h2>
+  </div>
+
+  <div class="container">
+    <p>Entrez le code de l'élève :</p>
+    <input type="text" id="codeInput" placeholder="Ex: 61071301020087">
+    <button class="btn-red" onclick="verifier()">Vérifier</button>
+    <div id="errorMessage" class="error">
+      ❌ Code invalide. Veuillez vérifier et réessayer.<br>
+      Ce code ne permet pas de valider cet attestation.
+    </div>
+    <button class="btn-blue" onclick="retourAccueil()">Retour</button>
+    <p class="note">Le code doit être exact pour accéder à l'attestation.</p>
+  </div>
+
+  <footer>
+    © 2025 QUICK SOFT INFORMATIQUE — Plateforme officielle de vérification
+  </footer>
+
+  <script>
+    function verifier() {
+      const code = String(document.getElementById("codeInput").value.trim());
+      const mapping = {
+        "61071301020087": "mutunza-bitota-jemima.html",
+        "61043201020086": "bamwenzele_milemba_berma.html",
+        "61003102010492": "salama_nzabonimpa_salome.html",
+        "61043201020046": "azina_bagalwa_aurore.html"
+        // Ajoute ici les prochains candidats
+      };
+
+      if (mapping[code]) {
+        window.location.href = mapping[code];
+      } else {
+        document.getElementById("errorMessage").style.display = "block";
+      }
+    }
+
+    function retourAccueil() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
