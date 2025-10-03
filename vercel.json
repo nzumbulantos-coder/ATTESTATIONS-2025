@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/mutunza-bitota-jemimma",
+      "destination": "/mutunza-bitota-jemimma/index.php"
+    }
+  ]
+}
