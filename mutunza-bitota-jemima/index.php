@@ -2,25 +2,45 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Attestation MUTUNZA BITOTA JEMIMA</title>
+  <title>Attestation Officielle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background-color: #fff;
       font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      padding: 20px;
       text-align: center;
-      padding: 40px;
+    }
+    .box {
+      border: 1px solid #000;
+      padding: 25px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+    .legal {
+      font-size: 16px;
+      color: #555;
+      margin-top: 20px;
     }
     img {
       max-width: 100%;
       height: auto;
+      margin-top: 20px;
+      border-radius: 5px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <h1>🎓 Attestation Officielle</h1>
-  <p>Ce document est une copie vérifiée de l’attestation de l’élève :</p>
-  <img src="mutunza_attestation.png" alt="Attestation MUTUNZA BITOTA JEMIMA">
+  <div class="box">
+    <p>61071301020087 COMPLEXE SCOLAIRE BERCEAU DU SAVOIR, COMMERCIALE ET GESTION</p>
+    <p>🎉 Félicitations MUTUNZA BITOTA JEMIMA 62% F</p>
+    <p>Édition 2025.</p>
+    <img src="mutunza_attestation.png" alt="Attestation MUTUNZA BITOTA JEMIMA">
+    <p class="legal">Ce document a été vérifié par la plateforme officielle. Toute falsification est strictement interdite.</p>
+  </div>
 </body>
 </html>
