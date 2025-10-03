@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vérification Attestation - MUTUNZA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 60px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 80%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005bb5;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔍 Vérification Attestation</h2>
+    <p>Entrez le code de MUTUNZA BITOTA JEMIMA :</p>
+    <input type="text" id="codeInput" placeholder="61071301020087">
+    <button onclick="verifier()">Vérifier</button>
+    <div id="errorMessage" class="error">❌ Code invalide. Veuillez vérifier et réessayer.</div>
+    <p class="note">Ce test est dédié uniquement à MUTUNZA BITOTA JEMIMA.</p>
+  </div>
+
+  <script>
+    function verifier() {
+      const code = String(document.getElementById("codeInput").value.trim());
+      const mapping = {
+        "61071301020087": "mutunza-bitota-jemima.html"
+      };
+
+      if (mapping[code]) {
+        window.location.href = mapping[code];
+      } else {
+        document.getElementById("errorMessage").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
